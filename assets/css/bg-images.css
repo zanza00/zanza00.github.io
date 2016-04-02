@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+
+.planet0{
+    background-image:url("../img/background/blue-planet-1.jpg");
+}
+.planet1{
+    background-image:url("../img/background/green-blue-planet.jpg");
+}
+.planet2{
+    background-image:url("../img/background/red-planet-1.jpg");
+}
+.planet3{
+    background-image:url("../img/background/green-planet-2.jpg");
+}
+.planet4{
+    background-image:url("../img/background/blue-planet-2.jpg");
+}
+.planet5{
+    background-image:url("../img/background/brown-planet.jpg");
+}
+.planet6{
+    background-image:url("../img/background/green-planet-1.jpg");
+}
