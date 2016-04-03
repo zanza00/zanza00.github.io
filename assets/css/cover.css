@@ -27,18 +27,12 @@ a:hover {
 html,
 body {
     height: 100%;
-    background-color: #333;
-}
-body {
     color: #fff;
     text-align: center;
     text-shadow: 0 1px 3px rgba(0,0,0,.5);
-
-    background: no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background: #000 no-repeat fixed center center;
+    -o-background-size: contain;
+    background-size: contain;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
