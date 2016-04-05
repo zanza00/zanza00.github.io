@@ -1,3 +1,31 @@
 .text-shadow {
     text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
 }
+
+.color0 {
+    color: #415A78;
+}
+
+.color1 {
+    color: #417EA6;
+}
+
+.color2 {
+    color: #DC9E5A;
+}
+
+.color3 {
+    color: #3DA899;
+}
+
+.color4 {
+    color: #5B83D1;
+}
+
+.color5 {
+    color: #54442A;
+}
+
+.color6 {
+    color: #559010;
+}

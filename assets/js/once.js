@@ -2,13 +2,25 @@
  * Created by @zanza00 on 02/04/2016.
  *
  */
+function setPlanetOfDay(number) {
+    var day = (number >= 1 && number < 7) ? number : new Date().getDay();
 
-function changeBg() {
-    var bodyElement = document.querySelector('body');
+    function changeBg() {
+        var bodyElement = document.querySelector('body');
 
-    var classOfTheDay = 'planet' + new Date().getDay();
+        var classOfTheDay = 'planet' + day;
 
-    bodyElement.classList.add(classOfTheDay);
+        bodyElement.classList.add(classOfTheDay);
+    }
+
+    function setColorOfDay() {
+        var classOfTheDay = 'color' + day;
+        $('.lead').addClass(classOfTheDay);
+    }
+
+    changeBg();
+    setColorOfDay();
+
 }
 
 function setRandomPhrase() {
@@ -29,4 +41,4 @@ function setRandomPhrase() {
 
 setRandomPhrase();
 
-changeBg();
+setPlanetOfDay();
