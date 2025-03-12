@@ -29,7 +29,13 @@ function setRandomPhrase() {
         'I poke the keys of the keyboard and somehow something happened',
         'Bingo Bongo Bango, bish <em>bash</em> bosh',
         'The schrodinger\'s bug is here ',
-        'I know Java Jutsu'
+        'I know Java Jutsu',
+        'Code goes in, magic comes out',
+        'Debugging is like being the detective in a crime movie where you\'re also the murderer',
+        'It works on my machine ¯\\_(ツ)_/¯',
+        'The code and I are having creative differences',
+        'Coffee.exe is essential for code.exe to run',
+        'My code doesn\'t always work, but when it does, I don\'t know why'
     ];
 
     var phrase = phrases[Math.floor(Math.random() * phrases.length)];
