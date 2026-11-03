@@ -1,26 +1,11 @@
-/**
- * Created by @zanza00 on 02/04/2016.
- *
- */
 function setPlanetOfDay(number) {
     var day = (number >= 1 && number < 7) ? number : new Date().getDay();
 
-    function changeBg() {
-        var bodyElement = document.querySelector('body');
+    document.body.classList.add('planet' + day);
 
-        var classOfTheDay = 'planet' + day;
-
-        bodyElement.classList.add(classOfTheDay);
-    }
-
-    function setColorOfDay() {
-        var classOfTheDay = 'color' + day;
-        $('.lead').addClass(classOfTheDay);
-    }
-
-    changeBg();
-    setColorOfDay();
-
+    document.querySelectorAll('.lead').forEach(function (el) {
+        el.classList.add('color' + day);
+    });
 }
 
 function setRandomPhrase() {
@@ -38,13 +23,24 @@ function setRandomPhrase() {
         'My code doesn\'t always work, but when it does, I don\'t know why'
     ];
 
-    var phrase = phrases[Math.floor(Math.random() * phrases.length)];
+    document.querySelector('#phrase').innerHTML = phrases[Math.floor(Math.random() * phrases.length)];
+}
 
-    var phraseElement = document.querySelector('#phrase');
+function setupTabs() {
+    var links = document.querySelectorAll('.masthead-nav a');
+    var panels = document.querySelectorAll('.tab-panel');
 
-    phraseElement.innerHTML = phrase;
+    links.forEach(function (link) {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            links.forEach(function (l) { l.classList.remove('active'); });
+            panels.forEach(function (p) { p.classList.remove('active'); });
+            link.classList.add('active');
+            document.querySelector(link.getAttribute('href')).classList.add('active');
+        });
+    });
 }
 
 setRandomPhrase();
-
 setPlanetOfDay();
+setupTabs();
